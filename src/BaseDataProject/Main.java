@@ -18,6 +18,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        //Создание изначального окна приложения
             Parent root = FXMLLoader.load(getClass().getResource("Auth.fxml"));
         primaryStage.setTitle("Restaurant");
         primaryStage.setScene(new Scene(root, 351, 470));
@@ -27,6 +28,7 @@ public class Main extends Application {
 
 
     public static void main(String[] args) throws SQLException {
+        //Пароль и логин входа в БД
         String user = "root";
         String password = "12345";
         //Создание объекта класса для передачи значений логина и пароля в MySQL.

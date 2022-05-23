@@ -36,22 +36,25 @@ public class Admin {
 
     @FXML
     void initialize() {
-        // Переход с сцены на сцену
+        // Кнопка перехода на поиск официанта по времени обсжуживания
         searchWriter.setOnAction(event -> {
-            searchWriter.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/BaseDataProject/searchWriter.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+            searchWriterButton();
         });
-        // Конец перехода
+    }
+    public void searchWriterButton(){
+        //Метод перехода на сцену поиска официанта по времени обслуживания
+        searchWriter.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/BaseDataProject/searchWriter.fxml"));
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
 }

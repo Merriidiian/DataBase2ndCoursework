@@ -37,10 +37,14 @@ public class searchWriter {
     private TextField timeBegin;
 
     @FXML
+    private Button exitButton;
+
+    @FXML
     private TextField timeEnd;
 
     @FXML
     void initialize() {
+        //Кнопка поиска
         searchButton.setOnAction(event -> {
             try {
                 giveWriterToTime();
@@ -49,7 +53,16 @@ public class searchWriter {
                 throwables.printStackTrace();
             }
         });
+        // Кнопка выхода
+        exitButton.setOnAction(event -> {
+            exitToAdmin();
+        });
     };
+    //Метод формирования поиска по времени
+    // 1. Перевод времени в число по формуле (час * 60 + мин)
+    // 2. Ввод в БД данных чисел
+    // 3. Сравнение чисел
+    // 4. Вывод информации о заказах в данном диапозоне
     public void giveWriterToTime() throws SQLException {
        String[] timeBeginOrderInScene = timeBegin.getText().split(":");
        String[] timeEndOrderInScene = timeEnd.getText().split(":");
@@ -73,5 +86,20 @@ public class searchWriter {
             outInAreaText = outInAreaText +"\n" + tp.getString("name_writer") + " served " + tp.getString("table_number") + " table in " + tp.getString("time_begin") + " to " + tp.getString("time_end");
         }
         searchWriterInTime.setText(outInAreaText);
+    }
+    //Метод выхода в сцену "Админ".
+    public void exitToAdmin() {
+        exitButton.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/BaseDataProject/admin.fxml"));
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

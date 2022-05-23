@@ -55,6 +55,7 @@ public class Authorisation {
                 try {
                     loginAndPassword(login,password);
                 } catch (SQLException throwables) {
+                    System.out.println("Неверный логин или пароль!");
                     throwables.printStackTrace();
                 }
                 System.out.println(authFlag + " is your profile!");
