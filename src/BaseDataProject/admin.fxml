@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="adminWindow" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="390.0" style="-fx-background-color: #faa76c;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BaseDataProject.Admin">
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <Button fx:id="searchCook" layoutX="30.0" layoutY="178.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="329.0" text=" Кто из поваров готовил блюдо, по которому поступила жалоба." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchWriter" layoutX="30.0" layoutY="72.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="329.0" text="Кто из официантов обслуживал конкретного клиента в определённое время" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchOrder" layoutX="30.0" layoutY="284.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="329.0" text="Перечислить заказы, общая сумма которых превышает ..... руб." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchFood" layoutX="30.0" layoutY="394.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="329.0" text="Перечислить блюда, для которых запас имеющихся на складе продуктов с единицей измерения ..... меньше ..... ." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Text layoutX="65.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" textAlignment="CENTER" wrappingWidth="258.9367218017578">
+         <font>
+            <Font name="Bookman Old Style" size="31.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
