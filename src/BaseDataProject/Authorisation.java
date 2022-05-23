@@ -86,6 +86,7 @@ public class Authorisation {
         Parent  root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
+        stage.setTitle("Админ");
         stage.showAndWait();
         // Конец перехода
     }

@@ -20,7 +20,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         //Создание изначального окна приложения
             Parent root = FXMLLoader.load(getClass().getResource("Auth.fxml"));
-        primaryStage.setTitle("Restaurant");
+        primaryStage.setTitle("Авторизация");
         primaryStage.setScene(new Scene(root, 351, 470));
         primaryStage.setResizable(false);
         primaryStage.show();
