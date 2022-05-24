@@ -43,6 +43,9 @@ public class Admin {
         searchCook.setOnAction(event -> {
             searchCookButton();
         });
+        searchOrder.setOnAction(event -> {
+            searchOrderButton();
+        });
     }
     public void searchWriterButton(){
         //Метод перехода на сцену поиска официанта по времени обслуживания
@@ -74,6 +77,22 @@ public class Admin {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setTitle("Поиск повара");
+        stage.show();
+    }
+    public void searchOrderButton() {
+        //Метод перехода на сцену поиска заказов по минимальной цене
+        searchCook.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/BaseDataProject/searchOrders.fxml"));
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Поиск заказов");
         stage.show();
     }
 
