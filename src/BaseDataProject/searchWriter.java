@@ -100,7 +100,7 @@ public class searchWriter {
         Parent root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
-        stage.setTitle("Поиск официанта");
+        stage.setTitle("Админ");
         stage.show();
     }
 }
